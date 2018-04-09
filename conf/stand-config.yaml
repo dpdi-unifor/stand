@@ -1,0 +1,37 @@
+#stand:
+#    debug: true
+#    port: 3323
+#    servers:
+#        database_url: mysql+pymysql://root:eaemen@localhost:3306/stand?charset=utf8
+#        redis_url: redis://127.0.0.1:6379
+#    services:
+#        tahiti:
+#            url: http://localhost:5000
+#            auth_token: 123456
+#    config:
+#        SQLALCHEMY_POOL_SIZE: 0
+#        SQLALCHEMY_POOL_RECYCLE: 60
+#
+
+# Stand configuration file
+stand:
+    debug: true
+    port: 3323
+    environment: prod # Requires prod in order to support web socket
+    #secret: ST_n0zP2QfoxD
+    secret: "123456"
+    servers:
+        # database_url: mysql+pymysql://root:lemon@stage.ctweb.inweb.org.br:33066/stand?charset=utf8
+        #        database_url: mysql+pymysql://lemon:ju1c3@mysql3.ctweb.inweb.org.br:33060/stand
+        database_url: mysql+pymysql://root:eaemen@localhost:3306/stand?charset=utf8
+        redis_url: redis://localhost:6379
+        #redis_url: redis://beta.ctweb.inweb.org.br:6379
+    services:
+      #thorn:
+      #     url: http://citron.ctweb.inweb.org.br:3000
+      #tahiti:
+      #      url: http://localhost:5000
+      #     auth_token: 123456
+    config:
+        SQLALCHEMY_POOL_SIZE: 0
+        SQLALCHEMY_POOL_RECYCLE: 60
